@@ -1,6 +1,7 @@
 package com.redfish.webdemo.lombok;
 
 import lombok.*;
+import org.springframework.beans.factory.annotation.Autowired;
 
 /**
  * @description:
@@ -9,6 +10,7 @@ import lombok.*;
  */
 
 @Builder
+@RequiredArgsConstructor(onConstructor = @__(@Autowired))
 public class Person {
     private String name;
     private final int age;
